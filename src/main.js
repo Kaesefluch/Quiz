@@ -181,9 +181,9 @@ function renderResults() {
         <p class="results-copy">Das bedeutet: Geschenk-Level 2. Und keine Sorge: Das Geburtstagsgeschenk steht fest, auch wenn ein paar Fragen ziemlich knifflig waren.</p>
         <div class="result-meter" role="img" aria-label="${percentage} Prozent richtig"><span style="width: ${percentage}%"></span></div>
         <div class="gift-levels" aria-label="Geschenk-Level">
-          <div class="gift-level"><span>LEVEL 1</span><strong>Ein maximal doofes Geschenk</strong><small>Zum Glück nicht deins.</small></div>
-          <div class="gift-level gift-level-won"><span>LEVEL 2 · DEIN LEVEL</span><strong>Das Geburtstagsgeschenk</strong><small>Ist schon fest eingeplant.</small></div>
-          <div class="gift-level"><span>LEVEL 3</span><strong>Ein Ferrari</strong><small>Vielleicht beim nächsten Geburtstag.</small></div>
+          <div class="gift-level"><span>LEVEL 1</span><strong>Ein Stück Hundekot</strong><small>Zum Glück nicht deins.</small></div>
+          <div class="gift-level gift-level-won"><span>LEVEL 2 · DEIN LEVEL</span><strong>Überraschung (es ist Geld)</strong><small>Ist schon fest eingeplant.</small></div>
+          <div class="gift-level"><span>LEVEL 3</span><strong>Ein niegelnagel neuer Ferrari</strong><small>Vielleicht beim nächsten Geburtstag.</small></div>
         </div>
         <button class="restart-button" type="button">Noch mal spielen <span aria-hidden="true">↻</span></button>
       </section>
