@@ -41,6 +41,13 @@ const questions = [
     answer: 'Richtige Antwort',
     note: 'Platzhalter für die Auflösung dieser Frage.',
   },
+  {
+    type: 'trick',
+    category: 'Buchstaben-Trick',
+    question: 'Wenn du dir einen Buchstaben zwischen A und D aussuchen müsstest. Welchen würdest du nicht nehmen?',
+    answers: ['A', 'B', 'C', 'D'],
+    note: 'Deine Wahl ist falsch. Die anderen drei Buchstaben wären richtig gewesen.',
+  },
 ]
 
 const app = document.querySelector('#app')
@@ -62,7 +69,7 @@ function render() {
         <input class="text-answer-input" id="text-answer" name="answer" autocomplete="off" required>
         <button class="next-button" type="submit">Antwort prüfen <span aria-hidden="true">→</span></button>
       </form>`
-    : `<div class="answer-list" role="group" aria-label="Antwortmöglichkeiten">
+    : `<div class="answer-list${item.type === 'trick' ? ' answer-list-letters' : ''}" role="group" aria-label="${item.type === 'trick' ? 'Buchstaben A bis D' : 'Antwortmöglichkeiten'}">
         ${item.answers.map((answer, index) => `
           <button class="answer-option" type="button" data-index="${index}" aria-pressed="false">
             <span class="answer-letter">${String.fromCharCode(65 + index)}</span>
@@ -133,10 +140,11 @@ function chooseAnswer(index) {
     const answerIndex = Number(button.dataset.index)
     button.setAttribute('aria-pressed', String(answerIndex === index))
     button.classList.add('is-locked')
-    if (answerIndex === item.correct) button.classList.add('is-correct')
+    if (item.type === 'trick') button.classList.add(answerIndex === index ? 'is-wrong' : 'is-correct')
+    else if (answerIndex === item.correct) button.classList.add('is-correct')
     else if (answerIndex === index) button.classList.add('is-wrong')
   })
-  showFeedback(index === item.correct, item)
+  showFeedback(item.type !== 'trick' && index === item.correct, item)
 }
 
 function showFeedback(isCorrect, item) {
@@ -182,7 +190,7 @@ function renderResults() {
         <div class="result-meter" role="img" aria-label="${percentage} Prozent richtig"><span style="width: ${percentage}%"></span></div>
         <div class="gift-levels" aria-label="Geschenk-Level">
           <div class="gift-level"><span>LEVEL 1</span><strong>Ein Stück Hundekot</strong><small>Von einem Dobermann</small></div>
-          <div class="gift-level gift-level-won"><span>LEVEL 2 · DEIN LEVEL</span><strong>Überraschung (es ist Geld)</strong><small>Aaaah, ein Punkt hat für Level 3 gefehlt.</small></div>
+          <div class="gift-level gift-level-won"><span>LEVEL 2 · DEIN LEVEL</span><strong>Überraschung (es ist Geld)</strong><small>Aaaah, nur ein Punkt hat für Level 3 gefehlt.</small></div>
           <div class="gift-level"><span>LEVEL 3</span><strong>Ein niegelnagel neuer Ferrari</strong><small>Vielleicht beim nächsten Geburtstag.</small></div>
         </div>
         <button class="restart-button" type="button">Noch mal spielen <span aria-hidden="true">↻</span></button>

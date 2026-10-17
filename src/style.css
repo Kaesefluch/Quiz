@@ -105,6 +105,9 @@ button { color: inherit; }
 .eyebrow-line { display: inline-block; width: 20px; height: 1px; background: currentColor; }
 h1 { margin: 0; font-family: var(--display); font-size: clamp(32px, 4vw, 48px); font-weight: 600; line-height: 1.13; letter-spacing: 0; }
 .answer-list { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.answer-list-letters .answer-option { grid-template-columns: minmax(0, 1fr) 20px; text-align: center; }
+.answer-list-letters .answer-letter { display: none; }
+.answer-list-letters .answer-text { font-family: var(--display); font-size: 20px; }
 .answer-option {
   min-height: 66px;
   display: grid;
