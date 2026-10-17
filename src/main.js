@@ -178,11 +178,11 @@ function renderResults() {
         <div class="results-label"><span class="eyebrow-line"></span> DEINE AUFLÖSUNG</div>
         <div class="results-score"><span>${score}</span><span class="results-total">/ ${questions.length}</span></div>
         <h1 id="results-title">Du hast ${score} von ${questions.length} Fragen richtig beantwortet.</h1>
-        <p class="results-copy">Das bedeutet: Geschenk-Level 2. Und keine Sorge: Das Geburtstagsgeschenk steht fest, auch wenn ein paar Fragen ziemlich knifflig waren.</p>
+        <p class="results-copy">Das bedeutet: Geschenk-Level 2! Herzlichen Glückwunsch! </p>
         <div class="result-meter" role="img" aria-label="${percentage} Prozent richtig"><span style="width: ${percentage}%"></span></div>
         <div class="gift-levels" aria-label="Geschenk-Level">
-          <div class="gift-level"><span>LEVEL 1</span><strong>Ein Stück Hundekot</strong><small>Zum Glück nicht deins.</small></div>
-          <div class="gift-level gift-level-won"><span>LEVEL 2 · DEIN LEVEL</span><strong>Überraschung (es ist Geld)</strong><small>Ist schon fest eingeplant.</small></div>
+          <div class="gift-level"><span>LEVEL 1</span><strong>Ein Stück Hundekot</strong><small>Von einem Dobermann</small></div>
+          <div class="gift-level gift-level-won"><span>LEVEL 2 · DEIN LEVEL</span><strong>Überraschung (es ist Geld)</strong><small>Damit kann man sich was kaufen</small></div>
           <div class="gift-level"><span>LEVEL 3</span><strong>Ein niegelnagel neuer Ferrari</strong><small>Vielleicht beim nächsten Geburtstag.</small></div>
         </div>
         <button class="restart-button" type="button">Noch mal spielen <span aria-hidden="true">↻</span></button>
