@@ -107,7 +107,7 @@ function render() {
         <aside class="side-note" aria-label="Geschenk-Hinweis">
           <div class="note-spark" aria-hidden="true">✳</div>
           <p class="note-kicker">KLEINER HINWEIS</p>
-          <p class="note-copy">Schwierige Fragen ändern nichts am Geburtstagsgeschenk.</p>
+          <p class="note-copy">Du stinkst!</p>
           <div class="note-footer"><span>${String(currentQuestion + 1).padStart(2, '0')}</span><span class="note-dash"></span><span>${String(questions.length).padStart(2, '0')}</span></div>
           <div class="note-decoration" aria-hidden="true">Q</div>
         </aside>
