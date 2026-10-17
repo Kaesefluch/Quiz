@@ -187,7 +187,7 @@ function renderResults() {
         </div>
         <button class="restart-button" type="button">Noch mal spielen <span aria-hidden="true">↻</span></button>
       </section>
-      <footer class="page-footer"><span>DANKE FÜRS MITRATEN.</span><span>GESCHENK-LEVEL 2 <span class="footer-dot">●</span> FESTGESETZT</span></footer>
+      <footer class="page-footer"><span>DANKE FÜRS MITRATEN.</span><span>GESCHENK-LEVEL 2</span></footer>
     </main>
   `
   app.querySelector('.restart-button').addEventListener('click', restart)
