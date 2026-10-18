@@ -1,5 +1,6 @@
 import './style.css'
 import mozambiqueFlag from './Pics/Flag_of_Mozambique.svg'
+import lulaImage from './Pics/Lula.webp'
 
 const questions = [
   {
@@ -10,15 +11,17 @@ const questions = [
     imageAlt: 'Flaggenbild',
     answers: ['Mosambik', 'Malawi', 'Tansania', 'Angola'],
     correct: 0,
-    note: 'Brrakka brakka AK47 Jonge!',
+    note: 'Tiefgründig: Brrakka brakkka AK47 Jonge!',
   },
   {
     type: 'choice',
-    category: 'Geruch',
-    question: 'Wie sehr riecht Daniel?',
-    answers: ['sehr', 'sehr sehr', 'sehr sehr sehr', 'arg'],
-    correct: 0,
-    note: 'Platzhalter für die Auflösung dieser Frage.',
+    category: 'Nahrungsmittel',
+    question: 'Nach welchem Gericht der nah-östlichen Küche wurde der brasilianische Präsident benannt?',
+    answers: ['Döner', 'Lula Kababi', 'Kümmel', 'Pizza'],
+    correct: 1,
+    note: 'Spannend: Tatsächlich wurde der brasilianische Präsident Luiz Inácio Lula da Silva nach dem Gericht "Lula Kababi" benannt.',
+    noteImage: lulaImage,
+    noteImageAlt: 'Bild von Lula',
   },
   {
     type: 'text',
@@ -156,7 +159,13 @@ function showFeedback(isCorrect, item) {
   const feedback = app.querySelector('.feedback')
   feedback.hidden = false
   feedback.className = `feedback ${isCorrect ? 'feedback-correct' : 'feedback-wrong'}`
-  feedback.innerHTML = `<span class="feedback-icon" aria-hidden="true">${isCorrect ? '✓' : '!'}</span><span><strong>${isCorrect ? 'Richtig!' : 'Nicht ganz.'}</strong> ${item.note}</span>`
+  feedback.innerHTML = `
+    <span class="feedback-icon" aria-hidden="true">${isCorrect ? '✓' : '!'}</span>
+    <div class="feedback-copy">
+      <div><strong>${isCorrect ? 'Richtig!' : 'Nicht ganz.'}</strong> ${item.note}</div>
+      ${item.noteImage ? `<img class="feedback-note-image" src="${item.noteImage}" alt="${item.noteImageAlt || 'Bild'}">` : ''}
+    </div>
+  `
 
   const nextButton = app.querySelector('.text-answer-form .next-button') || app.querySelector('.action-row .next-button')
   nextButton.disabled = false
