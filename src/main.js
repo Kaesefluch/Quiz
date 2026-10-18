@@ -5,7 +5,7 @@ const questions = [
   {
     type: 'flag',
     category: 'Flaggen',
-    question: 'Von welchem Land ist diese Flagge?',
+    question: 'Welchem Land gehört diese Flagge?',
     image: mozambiqueFlag,
     imageAlt: 'Flaggenbild',
     answers: ['Mosambik', 'Malawi', 'Tansania', 'Angola'],
