@@ -25,10 +25,10 @@ const questions = [
   },
   {
     type: 'text',
-    category: 'Drogen',
-    question: 'Welche Drogen hat Daniel noch nicht genommen?',
-    answer: 'Richtige Antwort',
-    note: 'Platzhalter für die Auflösung dieser Frage.',
+    category: 'Kurzzeitgedächtnis',
+    question: 'Wie lautet der vollständige Name des brasilianischen Präsidenten?',
+    answer: 'Luiz Inácio Lula da Silva',
+    note: 'Witzig: Joah hätteste dir mal lieber merken sollen.',
   },
   {
     type: 'choice',
