@@ -39,6 +39,14 @@ const questions = [
     note: 'Einfach nö',
   },
   {
+    type: 'choice',
+    category: 'Nahrungsergänzungsmittel',
+    question: 'Ist ein Hotdog ein Sandwich?',
+    answers: ['Ja', 'Nein'],
+    correct: [0, 1],
+    note: 'Zeig mal dein Wurstfach!',
+  },
+  {
     type: 'text',
     category: 'Kurzzeitgedächtnis II',
     question: 'Wie lautet der vollständige Name des brasilianischen Präsidenten?',
@@ -141,15 +149,16 @@ function render() {
 function chooseAnswer(index) {
   if (locked) return
   const item = questions[currentQuestion]
+  const correctAnswers = Array.isArray(item.correct) ? item.correct : [item.correct]
   app.querySelectorAll('.answer-option').forEach((button) => {
     const answerIndex = Number(button.dataset.index)
     button.setAttribute('aria-pressed', String(answerIndex === index))
     button.classList.add('is-locked')
     if (item.type === 'trick') button.classList.add(answerIndex === index ? 'is-wrong' : 'is-correct')
-    else if (answerIndex === item.correct) button.classList.add('is-correct')
+    else if (correctAnswers.includes(answerIndex)) button.classList.add('is-correct')
     else if (answerIndex === index) button.classList.add('is-wrong')
   })
-  showFeedback(item.type !== 'trick' && index === item.correct, item)
+  showFeedback(item.type !== 'trick' && correctAnswers.includes(index), item)
 }
 
 function showFeedback(isCorrect, item) {
