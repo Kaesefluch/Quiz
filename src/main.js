@@ -115,10 +115,11 @@ function render() {
           </div>`}
         </div>
 
-        <aside class="side-note" aria-label="Geschenk-Hinweis">
-          <div class="note-spark" aria-hidden="true">✳</div>
-          <p class="note-kicker">KLEINER HINWEIS</p>
-          <p class="note-copy">Du stinkst!</p>
+        <aside class="side-note" aria-label="Tipp zum Quiz">
+          <details class="note-details">
+            <summary><span class="note-bulb" aria-hidden="true">💡</span><span>Klicke hier für einen Tipp</span></summary>
+            <p class="note-copy">Du stinkst!</p>
+          </details>
           <div class="note-footer"><span>${String(currentQuestion + 1).padStart(2, '0')}</span><span class="note-dash"></span><span>${String(questions.length).padStart(2, '0')}</span></div>
           <div class="note-decoration" aria-hidden="true">Q</div>
         </aside>
