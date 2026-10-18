@@ -54,6 +54,13 @@ const questions = [
     note: 'lol wenn falsch, lmao sogar.',
   },
   {
+    type: 'text',
+    category: 'Gemüse',
+    question: 'Welches Gemüse wäre der/die beste Mitbewohner*in?',
+    acceptAny: true,
+    note: 'Gesund: Gemüse ist gesund!',
+  },
+  {
     type: 'trick',
     category: 'Buchstaben-Trick',
     question: 'Wenn du dir einen Buchstaben zwischen A und D aussuchen müsstest. Welchen würdest du nicht nehmen?',
@@ -142,7 +149,10 @@ function render() {
   app.querySelector('.text-answer-form')?.addEventListener('submit', (event) => {
     event.preventDefault()
     const answer = new FormData(event.currentTarget).get('answer').trim()
-    if (answer) showFeedback(answer.toLocaleLowerCase('de') === item.answer.toLocaleLowerCase('de'), item)
+    if (answer) {
+      const isCorrect = item.acceptAny || answer.toLocaleLowerCase('de') === item.answer.toLocaleLowerCase('de')
+      showFeedback(isCorrect, item)
+    }
   })
 }
 
