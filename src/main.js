@@ -1,15 +1,16 @@
 import './style.css'
+import mozambiqueFlag from './Pics/Flag_of_Mozambique.svg'
 
 const questions = [
   {
     type: 'flag',
     category: 'Flaggen',
     question: 'Von welchem Land ist diese Flagge?',
-    image: '',
+    image: mozambiqueFlag,
     imageAlt: 'Flaggenbild',
-    answers: ['Land A', 'Land B', 'Land C', 'Land D'],
+    answers: ['Mosambik', 'Malawi', 'Tansania', 'Angola'],
     correct: 0,
-    note: 'Platzhalter für eine kurze Erklärung zur Flagge.',
+    note: 'Brrakka brakka AK47 Jonge!',
   },
   {
     type: 'choice',
