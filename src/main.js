@@ -40,10 +40,10 @@ const questions = [
   },
   {
     type: 'text',
-    category: 'Thema eintragen',
-    question: 'Platzhalterfrage 5: Freitextfrage hier eintragen.',
-    answer: 'Richtige Antwort',
-    note: 'Platzhalter für die Auflösung dieser Frage.',
+    category: 'Kurzzeitgedächtnis II',
+    question: 'Wie lautet der vollständige Name des brasilianischen Präsidenten?',
+    answer: 'Luiz Inácio Lula da Silva',
+    note: 'lol wenn falsch, lmao sogar.',
   },
   {
     type: 'trick',
