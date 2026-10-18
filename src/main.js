@@ -165,9 +165,9 @@ function render() {
     </main>
   `
 
-  const JUMP_MIN = 70   // Mindestdistanz zur letzten Position (px)
-  const JUMP_X = 110    // maximale Sprungweite horizontal (px)
-  const JUMP_Y = 80     // maximale Sprungweite vertikal (px)
+  const JUMP_MIN = 140  // Mindestdistanz zur letzten Position (px)
+  const JUMP_X = 220    // maximale Sprungweite horizontal (px)
+  const JUMP_Y = 160     // maximale Sprungweite vertikal (px)
 
   const pickOffset = (button) => {
     const last = { x: Number(button.dataset.tx || 0), y: Number(button.dataset.ty || 0) }
@@ -186,14 +186,19 @@ function render() {
 
     const clamp = (value, min, max) => Math.min(Math.max(value, min), Math.max(min, max))
     let best = last
+    let bestDistance = -1
 
-    for (let i = 0; i < 10; i += 1) {
+    for (let i = 0; i < 20; i += 1) {
       const candidate = {
         x: clamp(Math.round((Math.random() * 2 - 1) * JUMP_X), minX, maxX),
         y: clamp(Math.round((Math.random() * 2 - 1) * JUMP_Y), minY, maxY)
       }
-      best = candidate
-      if (Math.hypot(candidate.x - last.x, candidate.y - last.y) >= JUMP_MIN) break
+      const distance = Math.hypot(candidate.x - last.x, candidate.y - last.y)
+      if (distance > bestDistance) {
+        best = candidate
+        bestDistance = distance
+      }
+      if (distance >= JUMP_MIN) break
     }
     return best
   }
