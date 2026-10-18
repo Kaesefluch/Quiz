@@ -1,6 +1,7 @@
 import './style.css'
 import mozambiqueFlag from './Pics/Flag_of_Mozambique.svg'
 import lulaImage from './Pics/Lula.webp'
+import beerImage from './Pics/Bier.jpg'
 
 const questions = [
   {
@@ -52,6 +53,16 @@ const questions = [
     question: 'Wie lautet der vollständige Name des brasilianischen Präsidenten?',
     answer: 'Luiz Inácio Lula da Silva',
     note: 'lol wenn falsch, lmao sogar.',
+  },
+  {
+    type: 'choice',
+    category: 'Leckere Getränke',
+    question: 'Woraus wird Hopfen gemacht?',
+    answers: ['Saft', 'Ayran', 'Bier', 'H2O'],
+    correct: 2,
+    note: 'Lecker: Bierchen, das lecker ist.',
+    noteImage: beerImage,
+    noteImageAlt: 'Bild von Bier',
   },
   {
     type: 'text',
