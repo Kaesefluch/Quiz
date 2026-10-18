@@ -16,6 +16,16 @@ const questions = [
   },
   {
     type: 'choice',
+    category: 'Leckere Drogis',
+    question: 'Wirst du heute Kokain ziehen?',
+    answers: ['Ja', 'Nein'],
+    correct: 0,
+    note: 'Zieh das Yayo, zieh das Yayo!',
+    runawayAnswer: 1,
+    runawayCount: 20
+  },
+  {
+    type: 'choice',
     category: 'Nahrungsmittel',
     question: 'Nach welchem Gericht der nah-östlichen Küche wurde der brasilianische Präsident benannt?',
     answers: ['Döner', 'Lula Kababi', 'Kümmel', 'Pizza'],
@@ -92,6 +102,7 @@ function render() {
   }
 
   const item = questions[currentQuestion]
+  let escapeAttempts = 0
   const progress = (currentQuestion / questions.length) * 100
   const answerContent = item.type === 'text'
     ? `<form class="text-answer-form">
@@ -154,8 +165,56 @@ function render() {
     </main>
   `
 
+  const JUMP_MIN = 70   // Mindestdistanz zur letzten Position (px)
+  const JUMP_X = 110    // maximale Sprungweite horizontal (px)
+  const JUMP_Y = 80     // maximale Sprungweite vertikal (px)
+
+  const pickOffset = (button) => {
+    const last = { x: Number(button.dataset.tx || 0), y: Number(button.dataset.ty || 0) }
+    const rect = button.getBoundingClientRect()
+    const area = app.getBoundingClientRect()
+
+    // Ursprungsposition des Buttons (ohne aktuellen Versatz)
+    const baseLeft = rect.left - last.x
+    const baseTop = rect.top - last.y
+
+    // Grenzen, damit der Button im Container bleibt (wichtig für Mobile)
+    const minX = area.left - baseLeft
+    const maxX = area.right - rect.width - baseLeft
+    const minY = area.top - baseTop
+    const maxY = area.bottom - rect.height - baseTop
+
+    const clamp = (value, min, max) => Math.min(Math.max(value, min), Math.max(min, max))
+    let best = last
+
+    for (let i = 0; i < 10; i += 1) {
+      const candidate = {
+        x: clamp(Math.round((Math.random() * 2 - 1) * JUMP_X), minX, maxX),
+        y: clamp(Math.round((Math.random() * 2 - 1) * JUMP_Y), minY, maxY)
+      }
+      best = candidate
+      if (Math.hypot(candidate.x - last.x, candidate.y - last.y) >= JUMP_MIN) break
+    }
+    return best
+  }
+
   app.querySelectorAll('.answer-option').forEach((button) => {
-    button.addEventListener('click', () => chooseAnswer(Number(button.dataset.index)))
+    button.addEventListener('click', (event) => {
+      const answerIndex = Number(button.dataset.index)
+      if (answerIndex === item.runawayAnswer && escapeAttempts < item.runawayCount && event.detail > 0) {
+        const offset = pickOffset(button)
+        escapeAttempts += 1
+        button.dataset.tx = offset.x
+        button.dataset.ty = offset.y
+        const tilt = offset.x >= 0 ? 8 : -8
+        button.style.transform = `translate(${offset.x}px, ${offset.y}px) rotate(${tilt}deg)`
+        return
+      }
+      button.style.transform = ''
+      button.dataset.tx = 0
+      button.dataset.ty = 0
+      chooseAnswer(answerIndex)
+    })
   })
   app.querySelector('.text-answer-form')?.addEventListener('submit', (event) => {
     event.preventDefault()

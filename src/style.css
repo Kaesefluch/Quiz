@@ -120,7 +120,12 @@ h1 { margin: 0; font-family: var(--display); font-size: clamp(32px, 4vw, 48px); 
   background: rgba(255, 255, 255, 0.43);
   text-align: left;
   cursor: pointer;
-  transition: background 150ms ease, border-color 150ms ease, transform 150ms ease;
+  position: relative;
+  transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.answer-option:hover,
+.answer-option:active {
+  z-index: 2;
 }
 .answer-option:not(.is-locked):hover { transform: translateY(-2px); border-color: #829585; background: #fffdf7; }
 .answer-letter { width: 27px; height: 27px; display: grid; place-items: center; border: 1px solid #d7d6ca; border-radius: 50%; color: #71766d; font-family: var(--mono); font-size: 10px; }
