@@ -128,8 +128,8 @@ function renderStart() {
       </header>
       <section class="start-content" aria-labelledby="start-title">
         <p class="eyebrow"><span class="eyebrow-line"></span> EIN BESONDERER TAG</p>
-        <h1 id="start-title">Hallo Geburtstagsstein.</h1>
-        <p class="start-copy">Willkommen zu deinem Geburtstagsquiz. Die Anzahl deiner richtigen Antworten wird am Ende darüber entscheiden, was für ein Geschenk du bekommst. Viel Erfolg!</p>
+        <h1 id="start-title">Hallo Geburtstags-Stein.</h1>
+        <p class="start-copy">Willkommen zu deinem Geburtstagsquiz.<br>Die Anzahl deiner richtigen Antworten wird am Ende darüber entscheiden, was für ein Geschenk du bekommst. Viel Erfolg!</p>
         <button class="restart-button start-button" type="button">Let's go! <span aria-hidden="true">→</span></button>
       </section>
       <footer class="page-footer"><span>VIEL ERFOLG!</span><span>GEBURTSTAGSQUIZ <span class="footer-dot">●</span> RUNDE 01</span></footer>
