@@ -36,7 +36,7 @@ const questions = [
     category: 'Kurzzeitgedächtnis',
     question: 'Wie lautet der vollständige Name des brasilianischen Präsidenten?',
     answer: 'Luiz Inácio Lula da Silva',
-    note: 'Training: Hier werden die Gehirnknoten trainiert.',
+    note: 'Training: Hier werden die Gehirnknoten trainiert. Richtig ist: Luiz Inácio Lula da Silva',
   },
   {
     type: 'choice',
