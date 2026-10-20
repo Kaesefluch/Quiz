@@ -91,6 +91,11 @@ button { color: inherit; }
   align-items: center;
   padding: 58px 0 72px;
 }
+.start-content { flex: 1; width: min(710px, 100%); display: flex; flex-direction: column; justify-content: center; align-items: flex-start; margin: 0 auto; padding: 70px 0; animation: rise-in 600ms 80ms ease-out both; }
+.start-content .eyebrow { margin-bottom: 22px; }
+.start-content h1 { max-width: 650px; font-size: clamp(42px, 6vw, 68px); }
+.start-copy { max-width: 590px; margin: 22px 0 0; color: #686c63; font-size: 17px; line-height: 1.7; }
+.start-button { margin-top: 32px; }
 .quiz-main { animation: rise-in 600ms 80ms ease-out both; }
 .progress-row { display: flex; justify-content: space-between; align-items: center; color: #686c63; }
 .progress-row strong { color: var(--ink); font-weight: 500; }
@@ -204,6 +209,8 @@ button:focus-visible, a:focus-visible { outline: 3px solid #d9683d; outline-offs
   .topbar { height: 74px; }
   .round-label { font-size: 8px; }
   .quiz-layout { display: block; padding: 45px 0 48px; }
+  .start-content { min-height: calc(100vh - 149px); padding: 60px 0; }
+  .start-copy { font-size: 15px; }
   .question-heading { padding: 40px 0 25px; }
   .side-note { display: none; }
   .results-content { width: 100%; }

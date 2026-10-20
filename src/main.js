@@ -118,6 +118,26 @@ let currentQuestion = 0
 let score = 0
 let locked = false
 
+function renderStart() {
+  app.innerHTML = `
+    <main class="quiz-shell start-shell">
+      <header class="topbar">
+        <a class="wordmark" href="#" aria-label="Quiz Start">quiz<span>zeit</span><i aria-hidden="true">.</i></a>
+        <div class="round-label"><span class="round-dot"></span> DEIN GEBURTSTAGSQUIZ</div>
+        <span aria-hidden="true"></span>
+      </header>
+      <section class="start-content" aria-labelledby="start-title">
+        <p class="eyebrow"><span class="eyebrow-line"></span> EIN BESONDERER TAG</p>
+        <h1 id="start-title">Hallo Geburtstagsstein.</h1>
+        <p class="start-copy">Willkommen zu deinem Geburtstagsquiz. Die Anzahl deiner richtigen Antworten wird am Ende darüber entscheiden, was für ein Geschenk du bekommst. Viel Erfolg!</p>
+        <button class="restart-button start-button" type="button">Let's go! <span aria-hidden="true">→</span></button>
+      </section>
+      <footer class="page-footer"><span>VIEL ERFOLG!</span><span>GEBURTSTAGSQUIZ <span class="footer-dot">●</span> RUNDE 01</span></footer>
+    </main>
+  `
+  app.querySelector('.start-button').addEventListener('click', render)
+}
+
 function render() {
   if (currentQuestion >= questions.length) {
     renderResults()
@@ -336,7 +356,7 @@ function restart() {
   currentQuestion = 0
   score = 0
   locked = false
-  render()
+  renderStart()
 }
 
 render()
