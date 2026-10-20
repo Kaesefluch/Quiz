@@ -132,7 +132,7 @@ function renderStart() {
         <p class="start-copy">Willkommen zu deinem Geburtstagsquiz.<br>Die Anzahl deiner richtigen Antworten wird am Ende darüber entscheiden, was für ein Geschenk du bekommst. Viel Erfolg!</p>
         <button class="restart-button start-button" type="button">Let's go! <span aria-hidden="true">→</span></button>
       </section>
-      <footer class="page-footer"><span>VIEL ERFOLG!</span><span>GEBURTSTAGSQUIZ <span class="footer-dot">●</span> RUNDE 01</span></footer>
+      <footer class="page-footer"><span>Du stinkst!</span><span>Peniskopf <span class="footer-dot">●</span> RUNDE 01</span></footer>
     </main>
   `
   app.querySelector('.start-button').addEventListener('click', render)
@@ -346,7 +346,7 @@ function renderResults() {
         </div>
         <button class="restart-button" type="button">Noch mal spielen <span aria-hidden="true">↻</span></button>
       </section>
-      <footer class="page-footer"><span>DANKE FÜRS MITRATEN.</span><span>GESCHENK-LEVEL 2</span></footer>
+      <footer class="page-footer"><span>Du stinkst!</span><span>GESCHENK-LEVEL 2</span></footer>
     </main>
   `
   app.querySelector('.restart-button').addEventListener('click', restart)
