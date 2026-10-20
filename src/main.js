@@ -122,7 +122,7 @@ function renderStart() {
   app.innerHTML = `
     <main class="quiz-shell start-shell">
       <header class="topbar">
-        <a class="wordmark" href="#" aria-label="Quiz Start">quiz<span>zeit</span><i aria-hidden="true">.</i></a>
+        <a class="wordmark" href="#" aria-label="Geburtssteinquiz">Geburts<span>stein</span>quiz</a>
         <div class="round-label"><span class="round-dot"></span> DEIN GEBURTSTAGSQUIZ</div>
         <span aria-hidden="true"></span>
       </header>
@@ -166,7 +166,7 @@ function render() {
   app.innerHTML = `
     <main class="quiz-shell">
       <header class="topbar">
-        <a class="wordmark" href="#" aria-label="Quiz Start">quiz<span>zeit</span><i aria-hidden="true">.</i></a>
+        <a class="wordmark" href="#" aria-label="Geburtssteinquiz">Geburts<span>stein</span>quiz</a>
         <div class="round-label"><span class="round-dot"></span> DAS GEBURTSTAGSQUIZ </div>
         <span class="round-label question-count">${currentQuestion + 1} / ${questions.length}</span>
       </header>
@@ -329,7 +329,7 @@ function renderResults() {
   app.innerHTML = `
     <main class="quiz-shell results-shell">
       <header class="topbar">
-        <a class="wordmark" href="#" aria-label="Quiz Start">quiz<span>zeit</span><i aria-hidden="true">.</i></a>
+        <a class="wordmark" href="#" aria-label="Geburtssteinquiz">Geburts<span>stein</span>quiz</a>
         <div class="round-label"><span class="round-dot"></span> RUNDE ABGESCHLOSSEN</div>
         <span class="results-stamp" aria-hidden="true">✓</span>
       </header>
