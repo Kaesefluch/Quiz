@@ -1,6 +1,6 @@
 # Geburtstagsquiz
 
-Ein kleines Quiz als statische Website. Jede Frage erscheint einzeln; am Ende gibt es die Punktzahl und immer Geschenk-Level 2.
+Ein kleines Quiz als statische Website. Jede Frage erscheint einzeln;
 
 ## Lokal starten
 
