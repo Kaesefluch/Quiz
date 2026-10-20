@@ -302,6 +302,9 @@ function advance() {
 
 function renderResults() {
   const percentage = Math.round((score / questions.length) * 100)
+  const level1Points = score > 1 ? `0–${score - 1} Punkte` : score === 1 ? '0 Punkte' : 'Keine Punkte'
+  const level2Points = `${score} ${score === 1 ? 'Punkt' : 'Punkte'}`
+  const level3Points = score < questions.length ? `${score + 1}–${questions.length} Punkte` : 'Keine Punkte'
 
   app.innerHTML = `
     <main class="quiz-shell results-shell">
@@ -317,9 +320,9 @@ function renderResults() {
         <p class="results-copy">Das bedeutet: Geschenk-Level 2! Herzlichen Glückwunsch! </p>
         <div class="result-meter" role="img" aria-label="${percentage} Prozent richtig"><span style="width: ${percentage}%"></span></div>
         <div class="gift-levels" aria-label="Geschenk-Level">
-          <div class="gift-level"><span>LEVEL 1</span><strong>Ein Stück Hundekot</strong><small>Von einem Dobermann</small></div>
-          <div class="gift-level gift-level-won"><span>LEVEL 2 · DEIN LEVEL</span><strong>Überraschung (es ist Geld)</strong><small>Aaaah, nur ein Punkt hat für Level 3 gefehlt.</small></div>
-          <div class="gift-level"><span>LEVEL 3</span><strong>Ein niegelnagel neuer Ferrari</strong><small>Vielleicht beim nächsten Geburtstag.</small></div>
+          <div class="gift-level"><span>LEVEL 1</span><strong>Ein Stück Hundekot</strong><small>${level1Points} · Von einem Dobermann</small></div>
+          <div class="gift-level gift-level-won"><span>LEVEL 2 · DEIN LEVEL</span><strong>Überraschung (es ist Geld)</strong><small>${level2Points}</small></div>
+          <div class="gift-level"><span>LEVEL 3</span><strong>Ein niegelnagel neuer Ferrari</strong><small>${level3Points} · Vielleicht beim nächsten Geburtstag.</small></div>
         </div>
         <button class="restart-button" type="button">Noch mal spielen <span aria-hidden="true">↻</span></button>
       </section>
