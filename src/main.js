@@ -109,7 +109,7 @@ const questions = [
     category: 'Buchstabenshit',
     question: 'Wenn du dir einen Buchstaben zwischen A und D aussuchen müsstest. Welchen würdest du nicht nehmen?',
     answers: ['A', 'B', 'C', 'D'],
-    note: 'Deine Wahl ist falsch. Die anderen drei Buchstaben wären richtig gewesen. Du scheiß Kacknoob!',
+    note: 'Deine Wahl ist FALSCH FALSCH FALSCH!!! Die anderen drei Buchstaben wären richtig gewesen!! Du scheiß Kacknoob!!!',
   },
 ]
 
