@@ -167,7 +167,7 @@ function render() {
     <main class="quiz-shell">
       <header class="topbar">
         <a class="wordmark" href="#" aria-label="Geburtssteinquiz">Geburts<span>stein</span>quiz</a>
-        <div class="round-label"><span class="round-dot"></span> DAS GEBURTSTAGSQUIZ </div>
+        <div class="round-label"><span class="round-dot"></span>DAS GEBURTSTAGSQUIZ</div>
         <span class="round-label question-count">${currentQuestion + 1} / ${questions.length}</span>
       </header>
 
