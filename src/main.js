@@ -29,7 +29,7 @@ const questions = [
     category: 'Schornsteinfeger',
     question: 'Was ist der Unterschied zwischen einer Elster und einem Schornsteinfeger?',
     answer: 'Die Elster hat einen weißen Körper und einen schwarzen Schwanz, der Schornsteinfeger hat eine Leiter',
-    note: 'Schornig: Der Stein ist schornig!',
+    note: 'Die Elster hat einen weißen Körper und einen schwarzen Schwanz, der Schornsteinfeger hat eine Leiter',
   },
   {
     type: 'text',
@@ -95,7 +95,7 @@ const questions = [
     question: 'Was passiert, wenn man einen Stein ins Wasser wirft?',
     answers: ['Er wird nass', 'Er wird nass', 'Er wird nass', 'Er wird nass'],
     correct: [2],
-    note: 'Lol, wenn du das falsch hast!',
+    note: 'Schornig: Der Stein ist schornig!',
   },
   {
     type: 'text',
@@ -106,7 +106,7 @@ const questions = [
   },
   {
     type: 'trick',
-    category: 'Buchstaben-Trick',
+    category: 'Buchstabenshit',
     question: 'Wenn du dir einen Buchstaben zwischen A und D aussuchen müsstest. Welchen würdest du nicht nehmen?',
     answers: ['A', 'B', 'C', 'D'],
     note: 'Deine Wahl ist falsch. Die anderen drei Buchstaben wären richtig gewesen.',
