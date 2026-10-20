@@ -28,7 +28,6 @@ const questions = [
     type: 'text',
     category: 'Schornsteinfeger',
     question: 'Was ist der Unterschied zwischen einer Elster und einem Schornsteinfeger?',
-    acceptAny: false,
     correct: 'Die Elster hat einen weißen Körper und einen schwarzen Schwanz, der Schornsteinfeger hat eine Leiter',
     note: 'Schornig: Der Stein ist schornig!',
   },
