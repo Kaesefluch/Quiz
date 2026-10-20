@@ -320,9 +320,9 @@ function renderResults() {
         <p class="results-copy">Das bedeutet: Geschenk-Level 2! Herzlichen Glückwunsch! </p>
         <div class="result-meter" role="img" aria-label="${percentage} Prozent richtig"><span style="width: ${percentage}%"></span></div>
         <div class="gift-levels" aria-label="Geschenk-Level">
-          <div class="gift-level"><span>LEVEL 1</span><strong>Ein Stück Hundekot</strong><small>${level1Points} · Von einem Dobermann</small></div>
-          <div class="gift-level gift-level-won"><span>LEVEL 2 · DEIN LEVEL</span><strong>Überraschung (es ist Geld)</strong><small>${level2Points}</small></div>
-          <div class="gift-level"><span>LEVEL 3</span><strong>Ein niegelnagel neuer Ferrari</strong><small>${level3Points} · Vielleicht beim nächsten Geburtstag.</small></div>
+          <div class="gift-level"><span>LEVEL 1</span><small>${level1Points}</small><strong>Ein Stück Hundekot</strong><small>Von einem Dobermann</small></div>
+          <div class="gift-level gift-level-won"><span>LEVEL 2 · DEIN LEVEL</span><small>Exakt ${level2Points}</small><strong>Überraschung (es ist Geld)</strong></div>
+          <div class="gift-level"><span>LEVEL 3</span><small>${level3Points}</small><strong>Ein niegelnagel neuer Ferrari</strong><small>Vielleicht beim nächsten Geburtstag.</small></div>
         </div>
         <button class="restart-button" type="button">Noch mal spielen <span aria-hidden="true">↻</span></button>
       </section>
