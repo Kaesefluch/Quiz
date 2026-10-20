@@ -16,16 +16,6 @@ const questions = [
   },
   {
     type: 'choice',
-    category: 'Leckere Drogis',
-    question: 'Wirst du heute Kokain ziehen?',
-    answers: ['Ja', 'Nein'],
-    correct: 0,
-    note: 'Zieh das Yayo, zieh das Yayo!',
-    runawayAnswer: 1,
-    runawayCount: 20
-  },
-  {
-    type: 'choice',
     category: 'Nahrungsmittel',
     question: 'Nach welchem Gericht der nah-östlichen Küche wurde der brasilianische Präsident benannt?',
     answers: ['Döner', 'Lula Kababi', 'Kümmel', 'Pizza'],
@@ -63,6 +53,16 @@ const questions = [
     question: 'Wie lautet der vollständige Name des brasilianischen Präsidenten?',
     answer: 'Luiz Inácio Lula da Silva',
     note: 'lol wenn falsch, lmao sogar.',
+  },
+  {
+    type: 'choice',
+    category: 'Leckere Drogis',
+    question: 'Wirst du heute Kokain ziehen?',
+    answers: ['Ja', 'Nein'],
+    correct: 0,
+    note: 'Zieh das Yayo, zieh das Yayo!',
+    runawayAnswer: 1,
+    runawayCount: 20
   },
   {
     type: 'choice',
