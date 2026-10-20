@@ -204,7 +204,7 @@ function render() {
           <div class="note-decoration" aria-hidden="true">Q</div>
         </aside>
       </section>
-      <footer class="page-footer"><span>VIEL ERFOLG!</span><span>GEBURTSTAGSQUIZ <span class="footer-dot">●</span> RUNDE 01</span></footer>
+      <footer class="page-footer"><span>VIEL ERFOLG!</span><span>GEBURTSTAGSQUIZ <span class="footer-dot">●</span> Du stinkst!</span></footer>
     </main>
   `
 
