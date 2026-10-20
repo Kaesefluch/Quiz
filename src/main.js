@@ -48,6 +48,14 @@ const questions = [
     note: 'Zeig mal dein Wurstfach!',
   },
   {
+    type: 'choice',
+    category: 'Stein',
+    question: 'Wie schwer ist ein Stein?',
+    answers: ['6,35kg', 'Daniel', 'Einstein', 'ein Stein'],
+    correct: [4],
+    note: 'Zeig mal dein Steinfach!',
+  },
+  {
     type: 'text',
     category: 'Kurzzeitgedächtnis II',
     question: 'Wie lautet der vollständige Name des brasilianischen Präsidenten?',
@@ -73,6 +81,14 @@ const questions = [
     note: 'Lecker: Bierchen, das lecker ist.',
     noteImage: beerImage,
     noteImageAlt: 'Bild von Bier',
+  },
+    {
+    type: 'choice',
+    category: 'Stein',
+    question: 'Was passiert, wenn man einen Stein ins Wasser wirft?',
+    answers: ['Er wird nass', 'Er wird nass', 'Er wird nass', 'Er wird nass'],
+    correct: [2],
+    note: 'Lol, wenn du das falsch hast!',
   },
   {
     type: 'text',
