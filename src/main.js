@@ -359,4 +359,4 @@ function restart() {
   renderStart()
 }
 
-render()
+renderStart()
