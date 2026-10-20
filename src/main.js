@@ -59,7 +59,7 @@ const questions = [
     category: 'Stein',
     question: 'Wie schwer ist ein Stein?',
     answers: ['6,35kg', 'Daniel', 'Einstein', 'ein Stein'],
-    correct: [4],
+    correct: [3],
     note: 'Zeig mal dein Steinfach!',
   },
   {
