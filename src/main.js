@@ -2,6 +2,7 @@ import './style.css'
 import mozambiqueFlag from './Pics/Flag_of_Mozambique.svg'
 import lulaImage from './Pics/Lula.webp'
 import beerImage from './Pics/Bier.jpg'
+import nagaImage from './Pics/naga.png'
 
 const questions = [
   {
@@ -45,6 +46,14 @@ const questions = [
     answers: ['Ja', 'Nein'],
     correct: 1,
     note: 'Einfach nö',
+  },
+  {
+    type: 'text',
+    category: 'Who was it?',
+    question: 'Who stole my bike?',
+    answer: 'Naga',
+    note: 'Naga: Naga stole my bike!',
+    noteImage: nagaImage,
   },
   {
     type: 'choice',
@@ -302,6 +311,7 @@ function showFeedback(isCorrect, item) {
     <div class="feedback-copy">
       <div><strong>${isCorrect ? 'Richtig!' : 'Nicht ganz.'}</strong> ${item.note}</div>
       ${item.noteImage ? `<img class="feedback-note-image" src="${item.noteImage}" alt="${item.noteImageAlt || 'Bild'}">` : ''}
+      ${item.noteImagePlaceholder ? `<div class="feedback-note-placeholder" role="img" aria-label="${item.noteImagePlaceholder}">${item.noteImagePlaceholder}</div>` : ''}
     </div>
   `
 
