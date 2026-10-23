@@ -3,6 +3,7 @@ import mozambiqueFlag from './Pics/Flag_of_Mozambique.svg'
 import lulaImage from './Pics/Lula.webp'
 import beerImage from './Pics/Bier.jpg'
 import nagaImage from './Pics/naga.png'
+import yayoSound from './Sounds/yayo.ogg'
 
 const questions = [
   {
@@ -286,6 +287,12 @@ function render() {
 function chooseAnswer(index) {
   if (locked) return
   const item = questions[currentQuestion]
+    if (item.category === 'Leckere Drogis') {
+    const audio = new Audio(yayoSound)
+    audio.play().catch(error => {
+      console.error('Sound konnte nicht abgespielt werden:', error)
+    })
+  }
   const correctAnswers = Array.isArray(item.correct) ? item.correct : [item.correct]
   app.querySelectorAll('.answer-option').forEach((button) => {
     const answerIndex = Number(button.dataset.index)
