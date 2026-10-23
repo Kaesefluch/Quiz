@@ -4,6 +4,7 @@ import lulaImage from './Pics/Lula.webp'
 import beerImage from './Pics/Bier.jpg'
 import nagaImage from './Pics/naga.png'
 import yayoSound from './Sounds/yayoSound.mp3'
+import resultSound from './Sounds/yippee.mp3'
 
 const questions = [
   {
@@ -339,6 +340,10 @@ function advance() {
 
 function renderResults() {
   const percentage = Math.round((score / questions.length) * 100)
+  const audio = new Audio(resultSound)
+  audio.play().catch(error => {
+  console.error('Ergebnis-Sound konnte nicht abgespielt werden:', error)
+  })
   const level1Points = score > 1 ? `0–${score - 1} Punkte` : score === 1 ? '0 Punkte' : 'Keine Punkte'
   const level2Points = `${score} ${score === 1 ? 'Punkt' : 'Punkte'}`
   const level3Points = score < questions.length ? `${score + 1}–${questions.length} Punkte` : 'Keine Punkte'
