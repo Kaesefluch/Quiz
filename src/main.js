@@ -3,7 +3,7 @@ import mozambiqueFlag from './Pics/Flag_of_Mozambique.svg'
 import lulaImage from './Pics/Lula.webp'
 import beerImage from './Pics/Bier.jpg'
 import nagaImage from './Pics/naga.png'
-import yayoSound from './Sounds/yayo.ogg'
+import yayoSound from './Sounds/yayoSound.mp3'
 
 const questions = [
   {
